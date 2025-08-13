@@ -1,3 +1,17 @@
+---
+title: "Two Sum"
+description: "Solve the Two Sum problem starting with a simple O(n²) approach, then optimize to O(n) using a hash table. Includes a clear explanation of hash functions and an FNV-1a example."
+comments: true
+lang: "en"
+publish: true
+draft: false
+enableToc: true
+tags:
+  - leetcode
+  - leetcode/easy
+  - typescript
+socialDescription: "Learn how to solve Two Sum efficiently: start with the brute-force baseline and then use a hash table to reach O(n). Clear intuition, examples, and a practical JS implementation."
+---
 ## The Problem
 Given an array of integers `nums` and an integer `target`, we need to return the indices of two numbers that add up to the target. The constraints guarantee exactly one solution exists, and we can't use the same element twice. 
 
