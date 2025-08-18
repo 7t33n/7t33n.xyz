@@ -1,6 +1,6 @@
 ---
 title: "Two Sum"
-description: "Solve the Two Sum problem starting with a simple O(n²) approach, then optimize to O(n) using a hash table. Includes a clear explanation of hash functions and an FNV-1a example."
+description: "Solve the Two Sum problem starting with a simple O(n²) approach, then optimize to O(n) using a hash table."
 comments: true
 lang: "en"
 publish: true
@@ -16,7 +16,6 @@ socialDescription: "Learn how to solve Two Sum efficiently: start with the brute
 Given an array of integers `nums` and an integer `target`, we need to return the indices of two numbers that add up to the target. The constraints guarantee exactly one solution exists, and we can't use the same element twice. 
 
 ## Basic Approach: Nested Loops
-
 The straightforward  solution uses two nested loops to check every possible pair. We iterate through each element and compare it with every other element to find the target sum.
 ```typescript 
 function twoSum(nums: number[], target: number): number[] {
@@ -37,15 +36,12 @@ function twoSum(nums: number[], target: number): number[] {
 This approach has O(n^2) time complexity, which work but isn't optimal for large datasets. 
 
 ## The Hash Table Solution
-
 The follow-up challenge asks for better than O(n^2) complexity. This is where hash table shine, offering O(n) time complexity through efficient key-value lookups.
 
 ### Understanding Hash Tables
-
 A hash table is a data structure that implements an associative array, mapping keys to values. It's designed for fast data retrieval - instead of searching through every element like a basic array, it uses a hash function to quickly locate items. 
 
 #### Hash Function
-
 A hash function maps data of arbitrary size to fixed-size values. Here's an example using the [[FNV-1a]] hash function:
 
 ```typescript
@@ -73,7 +69,6 @@ function fnv1a(str: string, seed: 0x811c9dc5): number {
 - **Collision Resolution**: Handles when different keys produce the same hash (chaining or open addressing)
 
 ## Optimized Two Sum Solution
-
 Using Javascript's built-in [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) (which implements a hash table), we can solve this in O(n) time:
 
 ```typescript
